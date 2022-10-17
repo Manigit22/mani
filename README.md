@@ -3,7 +3,7 @@
 
 ##SYNOPSIS
 	#include <unistd.h>
-        int execlp(const char *file, const char *arg, ...,(char  *) NULL);
+        int execl(const char *path, const char *arg, ...,NULL);
 
 
 ##DESCRIPTION
