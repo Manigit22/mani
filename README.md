@@ -8,7 +8,7 @@
 
 ##DESCRIPTION
 	If you want to replace the existing process with new process.Then, exec family of calls to be used.
-	execlP : The first argument should point the file name associated with the file being executed.The second argument represents the argument list available to the program. The third argument represents the variadic functions,this pointer must be cast (char *)NULL.
+	execl : The first argument should point the path name associated with the file being executed.The second argument represents the argument list available to the program. The third argument represents the variadic functions,this pointer must be NULL.
 
 
 #RETURN VALUE
