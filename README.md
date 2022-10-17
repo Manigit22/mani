@@ -11,9 +11,14 @@
 	execl : The first argument should point the path name associated with the file being executed.The second argument represents the argument list available to the program. The third argument represents the variadic functions,this pointer must be NULL.
 
 
-#RETURN VALUE
+##RETURN VALUE
 	On success, it will not return any value because of the process is replaced with any process.On failure, it will return -1.
-
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: to change process image
+	success: change the current process image with new process image
 
 
 2.#Threads using mutex
@@ -33,6 +38,13 @@
 	The mutex object referenced by mutex shall be unlocked by a call to pthread_mutex_unlock(). 
 ##RETURN VALUE
 	On success, pthread_create() returns 0; on error, it returns an error number, and the contents of *thread are undefined.
+
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: thread is not working
+	success: threads will print simultaneous
 	
 3.#Own kill command
 
@@ -48,6 +60,15 @@
 	
 ##RETURN VALUE
 	On success (at least one signal was sent), zero is returned.  On error, -1 is returned.
+
+##USAGE
+run make command
+	$make <filename>
+	./<filename the process which we want to kill>
+	$make <filename>
+	./<filename><pid of process which we want to kill must be alive>
+	fail: pid of process failed to kill
+	success: pid of process will be killed
        
 4.#Small and capital characters in thread
 
@@ -63,6 +84,13 @@
 	
 ##RETURN VALUE
 	On success, pthread_create() returns 0; on error, it returns an error number, and the contents of *thread are undefined.
+
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: thread is not working
+	success: threads will print characters
 
 6.#Create a directory,remove a directory
 
@@ -80,7 +108,13 @@
 ##RETURN VALUE
 	On success it will return 0,on failure -1 
 
-       
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: failed to create or remove directory
+	success: directory is created successfully and directory is removed successfully
+
 8.#Create a file without using create system call
 
 ##SYNOPSIS
@@ -95,6 +129,13 @@
 ##RETURN VALUE
 	open() : On success it will return open file fd, On failure it will return -1.
 	close() : On success it will return 0, On failure it will return -1. 
+
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: failed to create a file
+	success: file created successfully
 
 9.#ls command
 
@@ -116,6 +157,13 @@
 ##RETURN VALUE
 	The opendir() function return a pointer to the directory stream.  On error, NULL is returned.
 	The readdir() onsuccess 1 is returned,on error -1 is returned.
+
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: return an error
+	success: printf files in current working directory
 
 10.#Change the signal behaviour
 
@@ -139,7 +187,12 @@ First argument is signal num, specifies the signal and can be any valid signal e
 ##RETURN VALUE
 	On success it will return 0, On failure it will return -1.
 
-
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: default behaviour of signal will be excuted
+	success: default behaviour of signal will be changed
 
 11.#Swap the content of two files
 
@@ -161,3 +214,9 @@ First argument is signal num, specifies the signal and can be any valid signal e
 	write() :On success it will return number of characters written,On failure it will return -1.
 	close() : On success it will return 0, On failure it will return -1. 
 
+##USAGE
+run make command
+	$make <filename>
+	./<filename>
+	fail: content of two files remain same
+	success: content of two files will be change
